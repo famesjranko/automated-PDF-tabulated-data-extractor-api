@@ -130,3 +130,17 @@ Refer to the API documentation for detailed request and response formats.
 ## Contributing
 
 Contributions are welcome! Please fork this repository and submit pull requests.
+
+## SCREENSHOTS
+**UPLOAD**  
+![upload](https://github.com/4BDAW/Lensell-Project/blob/master/django-backend/screenshots//file-only.png)  
+
+**UPLOAD DB-DATA-CONTROL**  
+![upload-data-control](https://github.com/4BDAW/Lensell-Project/blob/master/django-backend/screenshots/data_control.png)  
+
+**ADMIN VIEW REPORTS**  
+![admin view reports](https://github.com/4BDAW/Lensell-Project/blob/master/django-backend/screenshots/reports.png)  
+
+**ADMIN EDIT/ADD/DELETE REPORT**  
+![admin edit reports](https://github.com/4BDAW/Lensell-Project/blob/master/django-backend/screenshots/change_report.png)  
+
