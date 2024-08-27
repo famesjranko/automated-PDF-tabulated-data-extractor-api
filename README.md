@@ -2,6 +2,8 @@
 
 This project is a Python-based backend system designed to extract tabulated data from PDF documents automatically. It utilizes a combination of YOLO object detection and Camelot for parsing tables and provides results in easily consumable formats like CSV and JSON. The system exposes a REST API for seamless integration and automation.
 
+For detailed full System Documentation, see [PDF-extraction-system-documentation.pdf](path/to/PDF-extraction-system-documentation.pdf).
+
 ## Features
 
 - **Automated Table Detection**: YOLOv3 is used for identifying tables in PDF documents.
