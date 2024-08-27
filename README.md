@@ -40,6 +40,8 @@ By utilizing the API as the central gateway, the entire process is streamlined a
 
 ![API Flow Diagram](diagrams/api-arch.jpg)
 
+![Extraction Engine Diagram](diagrams/http-arch.jpg)
+
 ### Extraction Engine Overview
 
 The extraction engine is designed to process PDF documents with non-standard formatting by leveraging trained object detection models (YOLO). It locates table data within PDFs using image recognition and converts the detected tables into CSV format using the Python library Camelot.
@@ -54,6 +56,14 @@ The extraction engine is designed to process PDF documents with non-standard for
 This approach offers a reliable solution for extracting table data from PDFs, even when dealing with complex document structures that lack a consistent semantic layout.
 
 ![Extraction Engine Diagram](diagrams/engine-arch.jpg)
+
+## Results / Examples
+
+![Extraction Engine Diagram](diagrams/cmd-line1.jpg)
+
+![Extraction Engine Diagram](diagrams/test-result1.jpg)
+
+![Extraction Engine Diagram](diagrams/test-result2.jpg)
 
 ## Installation
 
