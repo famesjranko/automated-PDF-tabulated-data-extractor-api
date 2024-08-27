@@ -17,6 +17,8 @@ The primary goal of this system is to reduce manual effort involved in extractin
 - **Modular Extraction Engine**: The extraction engine handles the core functionality of identifying and parsing tables within PDFs.
 - **Customizable Configuration**: Easily adjust start and end pages for extraction, export formats, and more.
 
+![Extraction Engine Diagram](diagrams/sys-arch.jpg)
+
 ## Technology Stack
 
 - **Python**: Core language for the system.
@@ -25,9 +27,33 @@ The primary goal of this system is to reduce manual effort involved in extractin
 - **Camelot**: Library used for table parsing and data extraction.
 - **SQLite**: Default database for storing report metadata.
 
-## High-Level System Architecture
+## Back-End Architecture
 
 The system is designed with a service-oriented architecture where the REST API acts as the gateway for all functionalities. The core extraction engine processes the uploaded PDFs, and results are stored in a SQLite database for future reference and retrieval.
+
+### Key Responsibilities of the API:
+- Manages all requests to and from the database.
+- Sends PDFs to the extraction engine.
+- Retrieves extracted data from system storage and returns it to the user.
+
+By utilizing the API as the central gateway, the entire process is streamlined and automated.
+
+![API Flow Diagram](diagrams/api-arch.jpg)
+
+### Extraction Engine Overview
+
+The extraction engine is designed to process PDF documents with non-standard formatting by leveraging trained object detection models (YOLO). It locates table data within PDFs using image recognition and converts the detected tables into CSV format using the Python library Camelot.
+
+#### Process Overview:
+1. The engine reads a PDF page using PyPDF2 and obtains the page dimensions.
+2. The PDF page is converted to an image using `pdf2img`, and the image dimensions are obtained using `matplotlib`.
+3. The image is passed to the object detection system (YOLO) to identify table data. If detected, the system returns the table's location coordinates.
+4. The coordinates are normalized for reference back to the original PDF document using both image and PDF page coordinates.
+5. The PDF page and normalized coordinates are passed to the Camelot library for data extraction into a dataframe, allowing for data cleaning and conversion to CSV.
+
+This approach offers a reliable solution for extracting table data from PDFs, even when dealing with complex document structures that lack a consistent semantic layout.
+
+![Extraction Engine Diagram](diagrams/engine-arch.jpg)
 
 ## Installation
 
