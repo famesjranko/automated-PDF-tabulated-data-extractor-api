@@ -19,8 +19,6 @@ The primary goal of this system is to reduce manual effort involved in extractin
 - **Modular Extraction Engine**: The extraction engine handles the core functionality of identifying and parsing tables within PDFs.
 - **Customizable Configuration**: Easily adjust start and end pages for extraction, export formats, and more.
 
-![Extraction Engine Diagram](diagrams/sys-arch.jpg)
-
 ## Technology Stack
 
 - **Python**: Core language for the system.
@@ -28,6 +26,8 @@ The primary goal of this system is to reduce manual effort involved in extractin
 - **YOLOv3**: Model used for object detection.
 - **Camelot**: Library used for table parsing and data extraction.
 - **SQLite**: Default database for storing report metadata.
+
+![Extraction Engine Diagram](diagrams/sys-arch.jpg)
 
 ## Back-End Architecture
 
